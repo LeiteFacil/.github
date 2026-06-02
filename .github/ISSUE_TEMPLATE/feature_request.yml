@@ -1,0 +1,51 @@
+name: ✨ Sugerir funcionalidade
+description: Propor uma melhoria ou nova feature
+title: "feat: "
+labels: ["enhancement", "triage"]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Área do produto
+      options:
+        - Manejo de rebanho
+        - Reprodução / IATF
+        - Sanidade & diagnósticos
+        - Produção leiteira
+        - Dietas & nutrição
+        - Relatórios
+        - Coleiras IoT
+        - Faturamento & assinaturas
+        - Plataforma / infra
+        - Outra
+    validations:
+      required: true
+
+  - type: textarea
+    id: problema
+    attributes:
+      label: Qual problema isso resolve?
+      description: Descreva a dor ou necessidade, não só a solução.
+    validations:
+      required: true
+
+  - type: textarea
+    id: solucao
+    attributes:
+      label: Solução proposta
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternativas
+    attributes:
+      label: Alternativas consideradas
+    validations:
+      required: false
+
+  - type: textarea
+    id: contexto
+    attributes:
+      label: Contexto adicional / mockups
+    validations:
+      required: false

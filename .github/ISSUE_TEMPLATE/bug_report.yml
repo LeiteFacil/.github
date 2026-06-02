@@ -1,0 +1,70 @@
+name: 🐛 Reportar bug
+description: Relatar um comportamento incorreto em algum serviço do Leite Fácil
+title: "bug: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por reportar! Preencha os campos para acelerar a triagem.
+        ⚠️ **Não** inclua segredos, tokens ou dados sensíveis de produtores.
+
+  - type: dropdown
+    id: servico
+    attributes:
+      label: Serviço afetado
+      options:
+        - Front-end web
+        - App mobile
+        - Back-end / BFF
+        - Agro-Core (IdP)
+        - Painel ADM (front)
+        - Painel ADM (back)
+        - Coleiras IoT
+        - Não sei
+    validations:
+      required: true
+
+  - type: textarea
+    id: descricao
+    attributes:
+      label: Descrição do bug
+      description: O que aconteceu?
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproducao
+    attributes:
+      label: Passos para reproduzir
+      placeholder: |
+        1. Vá em '...'
+        2. Clique em '...'
+        3. Veja o erro
+    validations:
+      required: true
+
+  - type: textarea
+    id: esperado
+    attributes:
+      label: Comportamento esperado
+    validations:
+      required: true
+
+  - type: textarea
+    id: ambiente
+    attributes:
+      label: Ambiente
+      description: Versão, branch, navegador/dispositivo, SO
+      placeholder: |
+        - Branch/versão:
+        - Plataforma: web (Chrome 1xx) / mobile (Android 14)
+    validations:
+      required: false
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Logs / prints / contexto adicional
+    validations:
+      required: false
