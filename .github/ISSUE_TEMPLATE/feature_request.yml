@@ -14,9 +14,8 @@ body:
         - Produção leiteira
         - Dietas & nutrição
         - Relatórios
-        - Coleiras IoT
+        - Coleiras
         - Faturamento & assinaturas
-        - Plataforma / infra
         - Outra
     validations:
       required: true
