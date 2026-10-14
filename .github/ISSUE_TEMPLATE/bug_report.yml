@@ -16,11 +16,9 @@ body:
       options:
         - Front-end web
         - App mobile
-        - Back-end / BFF
-        - Agro-Core (IdP)
-        - Painel ADM (front)
-        - Painel ADM (back)
-        - Coleiras IoT
+        - Back-end
+        - Painel administrativo
+        - Coleiras
         - Não sei
     validations:
       required: true

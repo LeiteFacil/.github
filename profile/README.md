@@ -4,25 +4,15 @@
 
 # Leite Fácil
 
-### Plataforma de gestão pecuária leiteira — do campo ao financeiro
+### Gestão leiteira simples, do campo ao financeiro
 
-*Manejo de rebanho · reprodução (IATF) · sanidade · produção leiteira · coleiras IoT · faturamento*
-
-<br/>
-
-![Status](https://img.shields.io/badge/status-em%20produção-2ea44f?style=for-the-badge)
-![Plataforma](https://img.shields.io/badge/web%20·%20mobile%20·%20IoT-multiplataforma-1f6feb?style=for-the-badge)
-![Repos](https://img.shields.io/badge/código-privado-6e7681?style=for-the-badge)
+*Rebanho · reprodução · sanidade · produção de leite · custos · relatórios*
 
 <br/>
 
-![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=flat-square&logo=nestjs&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![Expo](https://img.shields.io/badge/Expo-000020?style=flat-square&logo=expo&logoColor=white)
-![Drizzle](https://img.shields.io/badge/Drizzle_ORM-C5F74F?style=flat-square&logo=drizzle&logoColor=black)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
-![OAuth2](https://img.shields.io/badge/OAuth_2.0_·_RS256-EB5424?style=flat-square&logo=auth0&logoColor=white)
+[![Site](https://img.shields.io/badge/site-leitefacil.com.br-1f6feb?style=for-the-badge)](https://leitefacil.com.br)
+![Plataforma](https://img.shields.io/badge/web%20·%20mobile-multiplataforma-2ea44f?style=for-the-badge)
+![Funciona offline](https://img.shields.io/badge/funciona-sem%20internet-6e7681?style=for-the-badge)
 
 </div>
 
@@ -30,106 +20,46 @@
 
 ## Sobre
 
-O **Leite Fácil** é uma plataforma SaaS para produtores e veterinários gerenciarem a
-operação leiteira de ponta a ponta: cadastro e manejo de animais, protocolos de
-inseminação (**IATF**), controle sanitário, registro de produção, dietas, relatórios
-analíticos, coleiras IoT de monitoramento e o ciclo financeiro (assinaturas e cobrança).
+O **Leite Fácil** é um sistema de gestão para quem produz leite. Nasceu na rotina de uma
+propriedade leiteira da família, para trocar o caderno de anotações por informação útil
+na hora de decidir, e cada funcionalidade foi moldada pelo uso real no campo.
 
-A arquitetura é composta por serviços independentes que conversam entre si através de um
-**BFF** central, com identidade e autenticação isoladas em um **Identity Provider** próprio.
+Funciona no celular e no computador, inclusive sem internet no campo, e custa menos de
+R$ 1 por vaca ao mês.
 
----
-
-## Arquitetura
-
-```mermaid
-flowchart TD
-    subgraph Clientes
-        FE["Front-end Web<br/>React + Vite"]
-        MO["App Mobile<br/>Expo · offline-first"]
-        ADM["Painel ADM<br/>React"]
-    end
-
-    subgraph Backends
-        BFF["Back-end / BFF<br/>NestJS · :3001<br/>domínio + orquestração"]
-        ADMB["ADM Back-end<br/>NestJS"]
-        CORE["Agro-Core (IdP)<br/>NestJS · :3000<br/>auth · users · /internal/*"]
-    end
-
-    subgraph Infra
-        DB[("PostgreSQL<br/>Drizzle ORM")]
-        IOT["Coleiras IoT"]
-    end
-
-    FE -->|auth via BFF| BFF
-    MO -->|REST| BFF
-    ADM --> ADMB
-    BFF -->|OAuth2 RS256| CORE
-    ADMB --> CORE
-    BFF --> DB
-    ADMB --> DB
-    CORE --> DB
-    IOT --> BFF
-```
-
-> A autenticação do front passa **pelo BFF (`:3001`)**; o **Agro-Core** expõe apenas
-> rotas `/internal/*` para os back-ends, nunca diretamente para os clientes.
+Conheça mais em **[leitefacil.com.br](https://leitefacil.com.br)**.
 
 ---
 
-## Serviços
+## O que o sistema faz
 
-| Repositório | Papel | Stack |
-|---|---|---|
-| **`Agro-Core`** | Identity Provider standalone — auth, identidade e *user management* (`:3000`) | NestJS · BullMQ · class-validator |
-| **`leite-facil-back-end`** | Back-end de domínio + BFF — regra de negócio e orquestração (`:3001`) | NestJS · Drizzle ORM · PostgreSQL |
-| **`leite-facil-front-end`** | Aplicação web principal do produtor/veterinário | React · Vite · TanStack Query · Sentry |
-| **`leite-facil-mobile`** | App de campo offline-first (sincronização automática) | Expo · React Native · TanStack Query |
-| **`leite-facil-adm-back-end`** | Back-end do painel administrativo | NestJS · Drizzle · Neon |
-| **`leite-facil-adm-front-end`** | Painel administrativo (gestão interna) | React · React Router · Tailwind |
-| **`leite-facil-coleiras`** | Integração das coleiras IoT de monitoramento | — |
-| **`leite-facil-e2e`** | Testes end-to-end do ecossistema | Node · pg |
-
----
-
-## Stack & padrões
-
-| Camada | Tecnologias |
+| Área | O que você controla |
 |---|---|
-| **Back-end** | NestJS · TypeScript · Drizzle ORM · PostgreSQL · BullMQ |
-| **Front-end** | React · Vite · TanStack Query · Tailwind · Radix UI · Hugeicons |
-| **Mobile** | Expo · React Native · AsyncStorage (offline-first) |
-| **Auth** | OAuth 2.0 · JWT RS256 (public key) · class-validator |
-| **Observabilidade** | Sentry |
-| **Qualidade** | ESLint (`--max-warnings 0`) · Husky · lint-staged · testes E2E |
+| **Rebanho** | Vacas, touros, bezerros, lotes e genealogia, com histórico completo |
+| **Reprodução** | Inseminações (IATF), diagnósticos de prenhez, secagem, partos e previsão de cio |
+| **Sanidade** | Histórico sanitário, vacinas, tratamentos, carência e saúde do úbere |
+| **Produção de leite** | Produção diária por animal, tanque, coletas, perdas e acerto com o laticínio |
+| **Qualidade do leite** | Análises de CCS, CBT, gordura, proteína e lactose |
+| **Alimentação** | Silagem, dietas e estoque de insumos |
+| **Financeiro** | Custos, receitas, fluxo de caixa, custo de produção e rentabilidade |
+| **Relatórios** | Indicadores e relatórios do rebanho, da produção e das finanças |
 
-**Convenções do ecossistema**
-
-- Autenticação via **OAuth 2.0 / JWT RS256**, validação com **class-validator** (não Zod).
-- Em conflitos de contrato front × back, **o back é a fonte da verdade**.
-- Sem resíduo legacy: migrações e refatorações são feitas de uma vez (com backup).
-- Pre-commit roda **lint-staged + ESLint sem tolerância a warnings**.
+Estamos desenvolvendo também um **colar inteligente de monitoramento** de gado leiteiro,
+integrado ao sistema.
 
 ---
 
-## Áreas do produto
+## Quem somos
 
-![Rebanho](https://img.shields.io/badge/Manejo_de_rebanho-1f6feb?style=flat-square)
-![IATF](https://img.shields.io/badge/Reprodução_·_IATF-1f6feb?style=flat-square)
-![Sanidade](https://img.shields.io/badge/Sanidade_·_diagnósticos-1f6feb?style=flat-square)
-![Produção](https://img.shields.io/badge/Produção_leiteira-1f6feb?style=flat-square)
-![Dietas](https://img.shields.io/badge/Dietas_·_nutrição-1f6feb?style=flat-square)
-![Relatórios](https://img.shields.io/badge/Relatórios-1f6feb?style=flat-square)
-![IoT](https://img.shields.io/badge/Coleiras_IoT-1f6feb?style=flat-square)
-![Faturamento](https://img.shields.io/badge/Faturamento_·_assinaturas-1f6feb?style=flat-square)
+Time pequeno, com os pés no chão: consolidamos cada funcionalidade antes de avançar.
+Fomos selecionados em 1º lugar no edital da **ITECPB**, a Incubadora Tecnológica de
+Pato Branco (PR).
 
 ---
 
 <div align="center">
 
-### Repositórios internos
-
-Este é o perfil da organização **Leite Fácil**. O código é privado — acesso restrito à equipe.
+**Quer conhecer?** Agende uma demonstração em [leitefacil.com.br](https://leitefacil.com.br).
 
 <sub>Feito para o campo · © Leite Fácil</sub>
 
