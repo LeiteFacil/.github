@@ -44,8 +44,22 @@ Conheça mais em **[leitefacil.com.br](https://leitefacil.com.br)**.
 | **Financeiro** | Custos, receitas, fluxo de caixa, custo de produção e rentabilidade |
 | **Relatórios** | Indicadores e relatórios do rebanho, da produção e das finanças |
 
-Estamos desenvolvendo também um **colar inteligente de monitoramento** de gado leiteiro,
-integrado ao sistema.
+## Colar inteligente
+
+Estamos desenvolvendo nosso próprio **colar de monitoramento** de gado leiteiro,
+integrado diretamente ao Leite Fácil. Ele acompanha o animal de forma contínua e leva
+os dados para o celular do produtor:
+
+- **Detecção de cio:** o sensor de movimento mede a atividade e avisa o melhor momento
+  da cobertura, para não perder nenhuma oportunidade.
+- **Saúde monitorada:** temperatura corporal e do ambiente, para flagrar febre e sinais
+  de doença cedo.
+- **Localização e cerca virtual:** posição do animal no pasto e alerta automático se ele
+  sair da área definida.
+- **Histórico e análises:** atividade e comportamento registrados no sistema, junto do
+  restante da rotina da fazenda.
+
+Saiba mais em [leitefacil.com.br/colar-inteligente](https://leitefacil.com.br/colar-inteligente).
 
 ---
 
