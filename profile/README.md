@@ -10,7 +10,7 @@
 
 <br/>
 
-[![Site](https://img.shields.io/badge/site-leitefacil.com.br-1f6feb?style=for-the-badge)](https://leitefacil.com.br)
+[![Site](https://img.shields.io/badge/site-site.leite-facil.com-1f6feb?style=for-the-badge)](https://site.leite-facil.com)
 ![Plataforma](https://img.shields.io/badge/web%20·%20mobile-multiplataforma-2ea44f?style=for-the-badge)
 ![Funciona offline](https://img.shields.io/badge/funciona-sem%20internet-6e7681?style=for-the-badge)
 
@@ -27,7 +27,7 @@ na hora de decidir, e cada funcionalidade foi moldada pelo uso real no campo.
 Funciona no celular e no computador, inclusive sem internet no campo, e custa menos de
 R$ 1 por vaca ao mês.
 
-Conheça mais em **[leitefacil.com.br](https://leitefacil.com.br)**.
+Conheça mais em **[site.leite-facil.com](https://site.leite-facil.com)**.
 
 ---
 
@@ -59,7 +59,7 @@ os dados para o celular do produtor:
 - **Histórico e análises:** atividade e comportamento registrados no sistema, junto do
   restante da rotina da fazenda.
 
-Saiba mais em [leitefacil.com.br/colar-inteligente](https://leitefacil.com.br/colar-inteligente).
+Saiba mais em [site.leite-facil.com/colar-inteligente](https://site.leite-facil.com/colar-inteligente).
 
 ---
 
@@ -73,7 +73,7 @@ Pato Branco (PR).
 
 <div align="center">
 
-**Quer conhecer?** Agende uma demonstração em [leitefacil.com.br](https://leitefacil.com.br).
+**Quer conhecer?** Agende uma demonstração em [site.leite-facil.com](https://site.leite-facil.com).
 
 <sub>Feito para o campo · © Leite Fácil</sub>
 
