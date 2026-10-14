@@ -1,8 +1,9 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/LeiteFacil/.github/main/profile/assets/mascote.svg" alt="Leite Fácil" width="150" />
-
-# Leite Fácil
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/LeiteFacil/.github/main/profile/assets/banner-dark.svg">
+  <img alt="Leite Fácil" src="https://raw.githubusercontent.com/LeiteFacil/.github/main/profile/assets/banner-light.svg" width="880">
+</picture>
 
 ### Gestão leiteira simples, do campo ao financeiro
 
@@ -10,13 +11,13 @@
 
 <br/>
 
-[![Site](https://img.shields.io/badge/site-site.leite-facil.com-1f6feb?style=for-the-badge)](https://site.leite-facil.com)
+[![Site](https://img.shields.io/badge/site-site.leite--facil.com-1f6feb?style=for-the-badge)](https://site.leite-facil.com)
 ![Plataforma](https://img.shields.io/badge/web%20·%20mobile-multiplataforma-2ea44f?style=for-the-badge)
 ![Funciona offline](https://img.shields.io/badge/funciona-sem%20internet-6e7681?style=for-the-badge)
 
 </div>
 
----
+<img src="https://raw.githubusercontent.com/LeiteFacil/.github/main/profile/assets/divider-cerca.svg" width="100%" alt="">
 
 ## Sobre
 
@@ -29,7 +30,7 @@ R$ 1 por vaca ao mês.
 
 Conheça mais em **[site.leite-facil.com](https://site.leite-facil.com)**.
 
----
+<img src="https://raw.githubusercontent.com/LeiteFacil/.github/main/profile/assets/divider-cerca.svg" width="100%" alt="">
 
 ## O que o sistema faz
 
@@ -46,6 +47,11 @@ Conheça mais em **[site.leite-facil.com](https://site.leite-facil.com)**.
 
 ## Colar inteligente
 
+<table>
+<tr>
+<td width="240" align="center"><img src="https://raw.githubusercontent.com/LeiteFacil/.github/main/profile/assets/vaca-coleira.svg" width="220" alt="Vaca com colar inteligente emitindo sinal"></td>
+<td>
+
 Estamos desenvolvendo nosso próprio **colar de monitoramento** de gado leiteiro,
 integrado diretamente ao Leite Fácil. Ele acompanha o animal de forma contínua e leva
 os dados para o celular do produtor:
@@ -59,9 +65,13 @@ os dados para o celular do produtor:
 - **Histórico e análises:** atividade e comportamento registrados no sistema, junto do
   restante da rotina da fazenda.
 
+</td>
+</tr>
+</table>
+
 Saiba mais em [site.leite-facil.com/colar-inteligente](https://site.leite-facil.com/colar-inteligente).
 
----
+<img src="https://raw.githubusercontent.com/LeiteFacil/.github/main/profile/assets/divider-cerca.svg" width="100%" alt="">
 
 ## Quem somos
 
@@ -69,7 +79,7 @@ Time pequeno, com os pés no chão: consolidamos cada funcionalidade antes de av
 Fomos selecionados em 1º lugar no edital da **ITECPB**, a Incubadora Tecnológica de
 Pato Branco (PR).
 
----
+<img src="https://raw.githubusercontent.com/LeiteFacil/.github/main/profile/assets/divider-cerca.svg" width="100%" alt="">
 
 <div align="center">
 
